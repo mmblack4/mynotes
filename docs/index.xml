@@ -48,6 +48,24 @@
     </item>
     
     <item>
+      <title>Template</title>
+      <link>https://mmblack4.github.io/mynotes/python/pandas/template/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/pandas/template/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://mmblack4.github.io/mynotes/python/pandas/zero/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/pandas/zero/</guid>
+      <description>import numpy as np import pandas as pddtype = [(&amp;#39;Col1&amp;#39;,&amp;#39;int32&amp;#39;), (&amp;#39;Col2&amp;#39;,&amp;#39;float32&amp;#39;), (&amp;#39;Col3&amp;#39;,&amp;#39;float32&amp;#39;)] values = np.zeros(20, dtype=dtype) index = [&amp;#39;Row&amp;#39;+str(i) for i in range(1, len(values)+1)]df = pd.DataFrame(values, index=index) print(df)  Col1 Col2 Col3 Row1 0 0.0 0.0 Row2 0 0.0 0.0 Row3 0 0.0 0.0 Row4 0 0.0 0.0 Row5 0 0.0 0.0 Row6 0 0.0 0.0 Row7 0 0.0 0.0 Row8 0 0.0 0.0 Row9 0 0.0 0.0 Row10 0 0.</description>
+    </item>
+    
+    <item>
       <title>add</title>
       <link>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>

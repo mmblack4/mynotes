@@ -19,7 +19,7 @@
 <meta property="og:title" content="Template" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/basics/template-copy1/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/pandas/zero/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
@@ -33,8 +33,8 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Template",
-  "url": "https://mmblack4.github.io/mynotes/python/basics/template-copy1/",
-  "wordCount": "6",
+  "url": "https://mmblack4.github.io/mynotes/python/pandas/zero/",
+  "wordCount": "111",
   "datePublished": "2019-04-20T00:00:00&#43;00:00",
   "dateModified": "2019-04-20T00:00:00&#43;00:00",
   "author": {
@@ -123,11 +123,32 @@ MathJax.Hub.Config({
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello Toronto&#39;</span><span class="p">)</span></code></pre></div>
-<pre><code>Hello Toronto
-</code></pre>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></code></pre></div>
-<pre><code>2
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">dtype</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Col1&#39;</span><span class="p">,</span><span class="s1">&#39;int32&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Col2&#39;</span><span class="p">,</span><span class="s1">&#39;float32&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Col3&#39;</span><span class="p">,</span><span class="s1">&#39;float32&#39;</span><span class="p">)]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+<span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Row&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
+<pre><code>       Col1  Col2  Col3
+Row1      0   0.0   0.0
+Row2      0   0.0   0.0
+Row3      0   0.0   0.0
+Row4      0   0.0   0.0
+Row5      0   0.0   0.0
+Row6      0   0.0   0.0
+Row7      0   0.0   0.0
+Row8      0   0.0   0.0
+Row9      0   0.0   0.0
+Row10     0   0.0   0.0
+Row11     0   0.0   0.0
+Row12     0   0.0   0.0
+Row13     0   0.0   0.0
+Row14     0   0.0   0.0
+Row15     0   0.0   0.0
+Row16     0   0.0   0.0
+Row17     0   0.0   0.0
+Row18     0   0.0   0.0
+Row19     0   0.0   0.0
+Row20     0   0.0   0.0
 </code></pre>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>
