@@ -265,7 +265,57 @@ temps_df.columns # get columns
 
 
 
-temps_df.rows
+
+```python
+temps_df.Difference[1:4]
+```
+
+
+
+
+    2019-05-19    2
+    2019-05-20    5
+    2019-05-21    4
+    Freq: D, Name: Difference, dtype: int64
+
+
+
+
+```python
+temps_df.iloc[0] # get the row array postition 0
+```
+
+
+
+
+    chennai       36
+    Delhi         34
+    Difference     2
+    Name: 2019-05-18 00:00:00, dtype: int64
+
+
+
+
+```python
+temps_df.ix[1]
+```
+
+    /home/mmblack/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: DeprecationWarning: 
+    .ix is deprecated. Please use
+    .loc for label based indexing or
+    .iloc for positional indexing
+    
+    See the documentation here:
+    http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecated
+      """Entry point for launching an IPython kernel.
+
+
+
+
+
+    Index(['chennai', 'Delhi', 'Difference'], dtype='object')
+
+
 
 
 ```python
