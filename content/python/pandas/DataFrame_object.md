@@ -297,7 +297,7 @@ temps_df.iloc[0] # get the row array postition 0
 
 
 ```python
-temps_df.ix[1]
+temps_df.ix[1].index
 ```
 
     /home/mmblack/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: DeprecationWarning: 
@@ -314,6 +314,171 @@ temps_df.ix[1]
 
 
     Index(['chennai', 'Delhi', 'Difference'], dtype='object')
+
+
+
+
+```python
+temps_df.loc['2019-05-19']
+```
+
+
+
+
+    chennai       37
+    Delhi         39
+    Difference     2
+    Name: 2019-05-19 00:00:00, dtype: int64
+
+
+
+
+```python
+temps_df.iloc[[1, 3, 5]] # select only rows 1, 3, 5
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chennai</th>
+      <th>Delhi</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-05-19</th>
+      <td>37</td>
+      <td>39</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2019-05-21</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-23</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+temps_df.Delhi >40 # which values in Delhi column are great then 40
+```
+
+
+
+
+    2019-05-18    False
+    2019-05-19    False
+    2019-05-20     True
+    2019-05-21     True
+    2019-05-22     True
+    2019-05-23     True
+    2019-05-24     True
+    2019-05-25     True
+    Freq: D, Name: Delhi, dtype: bool
+
+
+
+
+```python
+temps_df[temps_df.Delhi > 40] # return the rows where the temps for delhi great then 40
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chennai</th>
+      <th>Delhi</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-05-20</th>
+      <td>36</td>
+      <td>41</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2019-05-21</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-22</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-23</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-24</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-25</th>
+      <td>37</td>
+      <td>42</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 

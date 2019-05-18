@@ -5,9 +5,14 @@ date: 2019-04-20
 description: "-"
 type: technical_note
 draft: false
----The pandas series object
+---
+
+```python
+The pandas series object
     the base data structure of pandas is the sereis object,which is 
     designed to operate similar to a numpy array but also add index         capablilities 
+```
+
 
 ```python
 import pandas as pd

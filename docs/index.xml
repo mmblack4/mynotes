@@ -22,6 +22,16 @@ import pandas as pd from pandas import DataFrame, Seriesdates = pd.date_range(&a
     </item>
     
     <item>
+      <title>Loading csv data from files</title>
+      <link>https://mmblack4.github.io/mynotes/python/pandas/loading_data_from_files/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/pandas/loading_data_from_files/</guid>
+      <description>Loading CSV data from files The pandas livrary provides built-in support for loading data in .csv format
+print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
       <title>Multiplication</title>
       <link>https://mmblack4.github.io/mynotes/python/basics/mult/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
@@ -36,8 +46,7 @@ import pandas as pd from pandas import DataFrame, Seriesdates = pd.date_range(&a
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mmblack4.github.io/mynotes/python/pandas/series_object/</guid>
-      <description>The pandas series object the base data structure of pandas is the sereis object,which is designed to operate similar to a numpy array but also add index capablilities
-import pandas as pd from pandas import Seriess = Series([1, 2, 3, 4]) #create a four item ss[[1, 3]] #return a series with the rows with labels 1 and 3 1 2 3 4 dtype: int64  s = Series([1, 2, 3, 4], index = [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;]) #create a item with index s a 1 b 2 c 3 d 4 dtype: int64  s[[&amp;#39;a&amp;#39;, &amp;#39;d&amp;#39;]] a 1 d 4 dtype: int64  s.</description>
+      <description>The pandas series object the base data structure of pandas is the sereis object,which is designed to operate similar to a numpy array but also add index capablilities import pandas as pd from pandas import Seriess = Series([1, 2, 3, 4]) #create a four item ss[[1, 3]] #return a series with the rows with labels 1 and 3 1 2 3 4 dtype: int64  s = Series([1, 2, 3, 4], index = [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;]) #create a item with index s a 1 b 2 c 3 d 4 dtype: int64  s[[&amp;#39;a&amp;#39;, &amp;#39;d&amp;#39;]] a 1 d 4 dtype: int64  s.</description>
     </item>
     
     <item>
@@ -69,6 +78,15 @@ import pandas as pd from pandas import Seriess = Series([1, 2, 3, 4]) #create a 
     
     <item>
       <title>Template</title>
+      <link>https://mmblack4.github.io/mynotes/python/pandas/template-copy2/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/pandas/template-copy2/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
       <link>https://mmblack4.github.io/mynotes/python/pandas/template/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
@@ -92,6 +110,42 @@ import pandas as pd from pandas import Seriess = Series([1, 2, 3, 4]) #create a 
       
       <guid>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</guid>
       <description>a = 10 b = 20c = a + bprint(c) 30  </description>
+    </item>
+    
+    <item>
+      <title>auto search</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/auto-search/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/auto-search/</guid>
+      <description>import webbrowser import timesearch_topic = [ &amp;#34;python basics&amp;#34;, &amp;#34;python interview questions&amp;#34;, &amp;#34;top analyze api&amp;#34;, &amp;#34;how to create api in flask&amp;#34; ]def search(): for topic in search_topic: webbrowser.open_new_tab(&amp;#39;http://www.google.com/search?btnG=1&amp;amp;q=%s&amp;#39; %topic) time.</description>
+    </item>
+    
+    <item>
+      <title>break with youtube song</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</guid>
+      <description>import webbrowser import timesong_list =[ &amp;#34;https://www.youtube.com/watch?v=kJQP7kiw5Fk&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=euCqAq6BRa4&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=UtF6Jej8yb4&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=nYh-n7EOtMA&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=J1OsKJW51HY&amp;#34;, ]def break_timer(interval): for i in song_list: time.sleep(interval) print(&amp;#39;time to take brake&amp;#39;) webbrowser.open(i) break_timer(5) time to take brake time to take brake time to take brake  </description>
+    </item>
+    
+    <item>
+      <title>caesar cipher</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</guid>
+      <description>Caesar Cipher: The Caesar cipher is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is &amp;lsquo;shifted&amp;rsquo; a certain number of places down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C, and so on. The method is named after Julius Caesar, who apparently used it to communicate with his generals.</description>
+    </item>
+    
+    <item>
+      <title>rock paper scissor</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</guid>
+      <description>import random chose = [&amp;#34;rock&amp;#34;,&amp;#34;paper&amp;#34;,&amp;#34;scissor&amp;#34;]def play(youChose): computerChose = random.choice(chose) print(&amp;#39;you:&amp;#39;,youChose,&amp;#39;,computer:&amp;#39;,computerChose) if youChose == computerChose: return &amp;#39;Draw&amp;#39; elif youChose == &amp;#39;rock&amp;#39; and computerChose == &amp;#39;paper&amp;#39;: return &amp;#34;computer won&amp;#34; elif youChose == &amp;#39;rock&amp;#39; and computerChose == &amp;#39;scissor&amp;#39;: return &amp;#34;you won&amp;#34; elif youChose == &amp;#39;paper&amp;#39; and computerChose == &amp;#39;rock&amp;#39;: return &amp;#39;you won&amp;#39; elif youChose == &amp;#39;paper&amp;#39; and computerChose == &amp;#39;scissor&amp;#39;: return &amp;#39;computer won&amp;#39; elif youChose == &amp;#39;scissor&amp;#39; and computerChose == &amp;#39;rock&amp;#39;: return &amp;#39;computer won&amp;#39; elif youChose == &amp;#39;scissor&amp;#39; and computerChose == &amp;#39;paper&amp;#39;: return &amp;#39;you won&amp;#39;play(&amp;#39;rock&amp;#39;) you: rock ,computer: paper &#39;computer won&#39;  play(&amp;#39;paper&amp;#39;) you: paper ,computer: scissor &#39;computer won&#39;  play(&amp;#39;scissor&amp;#39;) you: scissor ,computer: paper &#39;you won&#39;  play(&amp;#39;scissor&amp;#39;) you: scissor ,computer: paper &#39;you won&#39;  play(&amp;#39;rock&amp;#39;) you: rock ,computer: scissor &#39;you won&#39;  play(&amp;#39;rock&amp;#39;) you: rock ,computer: rock &#39;Draw&#39;  </description>
     </item>
     
   </channel>

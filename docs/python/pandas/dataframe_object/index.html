@@ -34,7 +34,7 @@
   "@type": "BlogPosting",
   "headline": "DataFrame object",
   "url": "https://mmblack4.github.io/mynotes/python/pandas/dataframe_object/",
-  "wordCount": "392",
+  "wordCount": "551",
   "datePublished": "2019-04-20T00:00:00&#43;00:00",
   "dateModified": "2019-04-20T00:00:00&#43;00:00",
   "author": {
@@ -329,7 +329,7 @@ Delhi         34
 Difference     2
 Name: 2019-05-18 00:00:00, dtype: int64
 </code></pre>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span></code></pre></div>
 <pre><code>/home/mmblack/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: DeprecationWarning: 
 .ix is deprecated. Please use
 .loc for label based indexing or
@@ -345,6 +345,133 @@ http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecat
 
 Index(['chennai', 'Delhi', 'Difference'], dtype='object')
 </code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2019-05-19&#39;</span><span class="p">]</span></code></pre></div>
+<pre><code>chennai       37
+Delhi         39
+Difference     2
+Name: 2019-05-19 00:00:00, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span> <span class="c1"># select only rows 1, 3, 5</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chennai</th>
+      <th>Delhi</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-05-19</th>
+      <td>37</td>
+      <td>39</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2019-05-21</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-23</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">Delhi</span> <span class="o">&gt;</span><span class="mi">40</span> <span class="c1"># which values in Delhi column are great then 40</span></code></pre></div>
+<pre><code>2019-05-18    False
+2019-05-19    False
+2019-05-20     True
+2019-05-21     True
+2019-05-22     True
+2019-05-23     True
+2019-05-24     True
+2019-05-25     True
+Freq: D, Name: Delhi, dtype: bool
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="p">[</span><span class="n">temps_df</span><span class="o">.</span><span class="n">Delhi</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">]</span> <span class="c1"># return the rows where the temps for delhi great then 40</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chennai</th>
+      <th>Delhi</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-05-20</th>
+      <td>36</td>
+      <td>41</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2019-05-21</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-22</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-23</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-24</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-25</th>
+      <td>37</td>
+      <td>42</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>
   <aside>
@@ -366,7 +493,7 @@ Index(['chennai', 'Delhi', 'Difference'], dtype='object')
 
     <footer class="footer text-center">
         <div class="container">
-            <span class="text-muted">This project contains 9 pages and is available on <a href="https://github.com/teamtact">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+            <span class="text-muted">This project contains 15 pages and is available on <a href="https://github.com/teamtact">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
         </div>
     </footer>
 
