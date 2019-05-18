@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mmblack4.github.io/mynotes/python/pandas/dataframe_object/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mmblack4.github.io/mynotes/python/basics/mult/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmblack4.github.io/mynotes/python/pandas/series_object/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
   

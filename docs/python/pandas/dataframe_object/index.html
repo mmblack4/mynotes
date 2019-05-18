@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="DataFrame object" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/pandas/dataframe_object/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DataFrame object"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.52" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DataFrame object",
+  "url": "https://mmblack4.github.io/mynotes/python/pandas/dataframe_object/",
+  "wordCount": "392",
+  "datePublished": "2019-04-20T00:00:00&#43;00:00",
+  "dateModified": "2019-04-20T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "TACT"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>DataFrame object</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://mmblack4.github.io/mynotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://mmblack4.github.io/mynotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Muthu Mani" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://mmblack4.github.io/mynotes/">Muthu Mani</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">DataFrame object</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2019-04-20T00:00:00Z "> 20 Apr 2019</time>
+    </div>
+  </header>
+  <div class="content">
+  <p>The pandas DataFrame object
+    a pandas series represents a single array of values, with an index label for each value.if you want to have more than one series of data that is aligned by a common index, then a Pandas DataFrame is used.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">Series</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2019-05-18&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-05-25&#39;</span><span class="p">)</span>
+<span class="n">temp_chennai</span> <span class="o">=</span> <span class="n">Series</span><span class="p">([</span><span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">37</span><span class="p">],</span>
+                     <span class="n">index</span> <span class="o">=</span> <span class="n">dates</span><span class="p">)</span>
+<span class="n">temp_delhi</span> <span class="o">=</span> <span class="n">Series</span><span class="p">([</span><span class="mi">34</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">],</span>
+                   <span class="n">index</span> <span class="o">=</span> <span class="n">dates</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># create a DataFrame from the two Series objects temp_chennai and temp_delhi</span>
+<span class="c1"># and give them column names</span>
+<span class="n">temps_df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&#34;chennai&#34;</span> <span class="p">:</span> <span class="n">temp_chennai</span><span class="p">,</span>
+     <span class="s2">&#34;Delhi&#34;</span> <span class="p">:</span> <span class="n">temp_delhi</span>
+<span class="p">})</span> 
+<span class="n">temps_df</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chennai</th>
+      <th>Delhi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-05-18</th>
+      <td>36</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>2019-05-19</th>
+      <td>37</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>2019-05-20</th>
+      <td>36</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2019-05-21</th>
+      <td>37</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2019-05-22</th>
+      <td>37</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2019-05-23</th>
+      <td>37</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2019-05-24</th>
+      <td>37</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2019-05-25</th>
+      <td>37</td>
+      <td>42</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="p">[</span><span class="s1">&#39;chennai&#39;</span><span class="p">]</span> <span class="c1"># get the column with the name chennai</span></code></pre></div>
+<pre><code>2019-05-18    36
+2019-05-19    37
+2019-05-20    36
+2019-05-21    37
+2019-05-22    37
+2019-05-23    37
+2019-05-24    37
+2019-05-25    37
+Freq: D, Name: chennai, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="p">[</span><span class="s1">&#39;Delhi&#39;</span><span class="p">]</span> <span class="c1"># get the column with the name Delhi</span></code></pre></div>
+<pre><code>2019-05-18    34
+2019-05-19    39
+2019-05-20    41
+2019-05-21    41
+2019-05-22    41
+2019-05-23    41
+2019-05-24    41
+2019-05-25    42
+Freq: D, Name: Delhi, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">chennai</span> <span class="c1"># gretrieve the chennai column through property syntax</span></code></pre></div>
+<pre><code>2019-05-18    36
+2019-05-19    37
+2019-05-20    36
+2019-05-21    37
+2019-05-22    37
+2019-05-23    37
+2019-05-24    37
+2019-05-25    37
+Freq: D, Name: chennai, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temp_diffs</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">temps_df</span><span class="o">.</span><span class="n">chennai</span> <span class="o">-</span> <span class="n">temps_df</span><span class="o">.</span><span class="n">Delhi</span><span class="p">)</span>
+<span class="n">temps_df</span><span class="p">[</span><span class="s1">&#39;Difference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_diffs</span>
+<span class="n">temps_df</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chennai</th>
+      <th>Delhi</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-05-18</th>
+      <td>36</td>
+      <td>34</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2019-05-19</th>
+      <td>37</td>
+      <td>39</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2019-05-20</th>
+      <td>36</td>
+      <td>41</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2019-05-21</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-22</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-23</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-24</th>
+      <td>37</td>
+      <td>41</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2019-05-25</th>
+      <td>37</td>
+      <td>42</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">columns</span> <span class="c1"># get columns </span></code></pre></div>
+<pre><code>Index(['chennai', 'Delhi', 'Difference'], dtype='object')
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">Difference</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span></code></pre></div>
+<pre><code>2019-05-19    2
+2019-05-20    5
+2019-05-21    4
+Freq: D, Name: Difference, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># get the row array postition 0</span></code></pre></div>
+<pre><code>chennai       36
+Delhi         34
+Difference     2
+Name: 2019-05-18 00:00:00, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">temps_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></code></pre></div>
+<pre><code>/home/mmblack/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:1: DeprecationWarning: 
+.ix is deprecated. Please use
+.loc for label based indexing or
+.iloc for positional indexing
+
+See the documentation here:
+http://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecated
+  &quot;&quot;&quot;Entry point for launching an IPython kernel.
+
+
+
+
+
+Index(['chennai', 'Delhi', 'Difference'], dtype='object')
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 9 pages and is available on <a href="https://github.com/teamtact">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
