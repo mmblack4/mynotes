@@ -50,7 +50,7 @@
                     <h4 class="card-header">Pandas</h4>
                     <div class="card-body">
                         <ul>
-                            {{ range (where .Pages "File.Dir" "in" "/python/Pandas/").ByTitle }}
+                            {{ range (where .Pages "File.Dir" "in" "/python/pandas/").ByTitle }}
                                 {{ if ne .Title "Template" }}
                                 <li>
                                     <a href="{{.Permalink}}">{{.Title}}</a>
@@ -64,6 +64,5 @@
         </div>
         
     </div>
-
 </main>
 {{ end }}
