@@ -12,6 +12,42 @@
     
     
     <item>
+      <title>Add</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</guid>
+      <description>a = 10 b = 20c = a + bprint(c) 30  </description>
+    </item>
+    
+    <item>
+      <title>Auto Search</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/auto-search/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/auto-search/</guid>
+      <description>import webbrowser import timesearch_topic = [ &amp;#34;python basics&amp;#34;, &amp;#34;python interview questions&amp;#34;, &amp;#34;top analyze api&amp;#34;, &amp;#34;how to create api in flask&amp;#34; ]def search(): for topic in search_topic: webbrowser.open_new_tab(&amp;#39;http://www.google.com/search?btnG=1&amp;amp;q=%s&amp;#39; %topic) time.</description>
+    </item>
+    
+    <item>
+      <title>Break with youtube song</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</guid>
+      <description>import webbrowser import timesong_list =[ &amp;#34;https://www.youtube.com/watch?v=kJQP7kiw5Fk&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=euCqAq6BRa4&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=UtF6Jej8yb4&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=nYh-n7EOtMA&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=J1OsKJW51HY&amp;#34;, ]def break_timer(interval): for i in song_list: time.sleep(interval) print(&amp;#39;time to take brake&amp;#39;) webbrowser.open(i) break_timer(5) time to take brake time to take brake time to take brake  </description>
+    </item>
+    
+    <item>
+      <title>Caesar Cipher</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</guid>
+      <description>Caesar Cipher: The Caesar cipher is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is &amp;lsquo;shifted&amp;rsquo; a certain number of places down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C, and so on. The method is named after Julius Caesar, who apparently used it to communicate with his generals.</description>
+    </item>
+    
+    <item>
       <title>DataFrame object</title>
       <link>https://mmblack4.github.io/mynotes/python/pandas/dataframe_object/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
@@ -22,7 +58,7 @@ import pandas as pd from pandas import DataFrame, Seriesdates = pd.date_range(&a
     </item>
     
     <item>
-      <title>Find you IP-id and name</title>
+      <title>Find My IP-id and name</title>
       <link>https://mmblack4.github.io/mynotes/python/basics/find-you-ip-id-and-name/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
@@ -47,6 +83,15 @@ print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
       
       <guid>https://mmblack4.github.io/mynotes/python/basics/mult/</guid>
       <description>a = 29 b = 4c = a * b print(c) 116  </description>
+    </item>
+    
+    <item>
+      <title>Rock Paper Scissor</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</guid>
+      <description>import random chose = [&amp;#34;rock&amp;#34;,&amp;#34;paper&amp;#34;,&amp;#34;scissor&amp;#34;]def play(youChose): computerChose = random.choice(chose) print(&amp;#39;you:&amp;#39;,youChose,&amp;#39;,computer:&amp;#39;,computerChose) if youChose == computerChose: return &amp;#39;Draw&amp;#39; elif youChose == &amp;#39;rock&amp;#39; and computerChose == &amp;#39;paper&amp;#39;: return &amp;#34;computer won&amp;#34; elif youChose == &amp;#39;rock&amp;#39; and computerChose == &amp;#39;scissor&amp;#39;: return &amp;#34;you won&amp;#34; elif youChose == &amp;#39;paper&amp;#39; and computerChose == &amp;#39;rock&amp;#39;: return &amp;#39;you won&amp;#39; elif youChose == &amp;#39;paper&amp;#39; and computerChose == &amp;#39;scissor&amp;#39;: return &amp;#39;computer won&amp;#39; elif youChose == &amp;#39;scissor&amp;#39; and computerChose == &amp;#39;rock&amp;#39;: return &amp;#39;computer won&amp;#39; elif youChose == &amp;#39;scissor&amp;#39; and computerChose == &amp;#39;paper&amp;#39;: return &amp;#39;you won&amp;#39;play(&amp;#39;rock&amp;#39;) you: rock ,computer: paper &#39;computer won&#39;  play(&amp;#39;paper&amp;#39;) you: paper ,computer: scissor &#39;computer won&#39;  play(&amp;#39;scissor&amp;#39;) you: scissor ,computer: paper &#39;you won&#39;  play(&amp;#39;scissor&amp;#39;) you: scissor ,computer: paper &#39;you won&#39;  play(&amp;#39;rock&amp;#39;) you: rock ,computer: scissor &#39;you won&#39;  play(&amp;#39;rock&amp;#39;) you: rock ,computer: rock &#39;Draw&#39;  </description>
     </item>
     
     <item>
@@ -110,51 +155,6 @@ print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
       
       <guid>https://mmblack4.github.io/mynotes/python/pandas/zero/</guid>
       <description>import numpy as np import pandas as pddtype = [(&amp;#39;Col1&amp;#39;,&amp;#39;int32&amp;#39;), (&amp;#39;Col2&amp;#39;,&amp;#39;float32&amp;#39;), (&amp;#39;Col3&amp;#39;,&amp;#39;float32&amp;#39;)] values = np.zeros(20, dtype=dtype) index = [&amp;#39;Row&amp;#39;+str(i) for i in range(1, len(values)+1)]df = pd.DataFrame(values, index=index) print(df)  Col1 Col2 Col3 Row1 0 0.0 0.0 Row2 0 0.0 0.0 Row3 0 0.0 0.0 Row4 0 0.0 0.0 Row5 0 0.0 0.0 Row6 0 0.0 0.0 Row7 0 0.0 0.0 Row8 0 0.0 0.0 Row9 0 0.0 0.0 Row10 0 0.</description>
-    </item>
-    
-    <item>
-      <title>add</title>
-      <link>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</guid>
-      <description>a = 10 b = 20c = a + bprint(c) 30  </description>
-    </item>
-    
-    <item>
-      <title>auto search</title>
-      <link>https://mmblack4.github.io/mynotes/python/basics/auto-search/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mmblack4.github.io/mynotes/python/basics/auto-search/</guid>
-      <description>import webbrowser import timesearch_topic = [ &amp;#34;python basics&amp;#34;, &amp;#34;python interview questions&amp;#34;, &amp;#34;top analyze api&amp;#34;, &amp;#34;how to create api in flask&amp;#34; ]def search(): for topic in search_topic: webbrowser.open_new_tab(&amp;#39;http://www.google.com/search?btnG=1&amp;amp;q=%s&amp;#39; %topic) time.</description>
-    </item>
-    
-    <item>
-      <title>break with youtube song</title>
-      <link>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</guid>
-      <description>import webbrowser import timesong_list =[ &amp;#34;https://www.youtube.com/watch?v=kJQP7kiw5Fk&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=euCqAq6BRa4&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=UtF6Jej8yb4&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=nYh-n7EOtMA&amp;#34;, &amp;#34;https://www.youtube.com/watch?v=J1OsKJW51HY&amp;#34;, ]def break_timer(interval): for i in song_list: time.sleep(interval) print(&amp;#39;time to take brake&amp;#39;) webbrowser.open(i) break_timer(5) time to take brake time to take brake time to take brake  </description>
-    </item>
-    
-    <item>
-      <title>caesar cipher</title>
-      <link>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</guid>
-      <description>Caesar Cipher: The Caesar cipher is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is &amp;lsquo;shifted&amp;rsquo; a certain number of places down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C, and so on. The method is named after Julius Caesar, who apparently used it to communicate with his generals.</description>
-    </item>
-    
-    <item>
-      <title>rock paper scissor</title>
-      <link>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</guid>
-      <description>import random chose = [&amp;#34;rock&amp;#34;,&amp;#34;paper&amp;#34;,&amp;#34;scissor&amp;#34;]def play(youChose): computerChose = random.choice(chose) print(&amp;#39;you:&amp;#39;,youChose,&amp;#39;,computer:&amp;#39;,computerChose) if youChose == computerChose: return &amp;#39;Draw&amp;#39; elif youChose == &amp;#39;rock&amp;#39; and computerChose == &amp;#39;paper&amp;#39;: return &amp;#34;computer won&amp;#34; elif youChose == &amp;#39;rock&amp;#39; and computerChose == &amp;#39;scissor&amp;#39;: return &amp;#34;you won&amp;#34; elif youChose == &amp;#39;paper&amp;#39; and computerChose == &amp;#39;rock&amp;#39;: return &amp;#39;you won&amp;#39; elif youChose == &amp;#39;paper&amp;#39; and computerChose == &amp;#39;scissor&amp;#39;: return &amp;#39;computer won&amp;#39; elif youChose == &amp;#39;scissor&amp;#39; and computerChose == &amp;#39;rock&amp;#39;: return &amp;#39;computer won&amp;#39; elif youChose == &amp;#39;scissor&amp;#39; and computerChose == &amp;#39;paper&amp;#39;: return &amp;#39;you won&amp;#39;play(&amp;#39;rock&amp;#39;) you: rock ,computer: paper &#39;computer won&#39;  play(&amp;#39;paper&amp;#39;) you: paper ,computer: scissor &#39;computer won&#39;  play(&amp;#39;scissor&amp;#39;) you: scissor ,computer: paper &#39;you won&#39;  play(&amp;#39;scissor&amp;#39;) you: scissor ,computer: paper &#39;you won&#39;  play(&amp;#39;rock&amp;#39;) you: rock ,computer: scissor &#39;you won&#39;  play(&amp;#39;rock&amp;#39;) you: rock ,computer: rock &#39;Draw&#39;  </description>
     </item>
     
   </channel>

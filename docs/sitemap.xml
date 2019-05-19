@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmblack4.github.io/mynotes/python/basics/auto-search/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mmblack4.github.io/mynotes/python/pandas/dataframe_object/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
@@ -19,6 +39,11 @@
   
   <url>
     <loc>https://mmblack4.github.io/mynotes/python/basics/mult/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -54,31 +79,6 @@
   
   <url>
     <loc>https://mmblack4.github.io/mynotes/python/pandas/zero/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mmblack4.github.io/mynotes/python/basics/auto-search/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mmblack4.github.io/mynotes/python/basics/break-with-youtube-song/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mmblack4.github.io/mynotes/python/basics/caesar-cipher/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
   
