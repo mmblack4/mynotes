@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mmblack4.github.io/mynotes/python/sqlalchemy/note1/</loc>
+    <lastmod>2019-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmblack4.github.io/mynotes/python/basics/file-system-methods/</loc>
+    <lastmod>2019-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
@@ -79,7 +89,7 @@
   
   <url>
     <loc>https://mmblack4.github.io/mynotes/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

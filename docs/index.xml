@@ -6,10 +6,29 @@
     <description>Recent content on Muthu Mani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mmblack4.github.io/mynotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Create Table And Insert Data</title>
+      <link>https://mmblack4.github.io/mynotes/python/sqlalchemy/note1/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/sqlalchemy/note1/</guid>
+      <description>import sqlalchemy from sqlalchemy import create_engine from sqlalchemy import Column, Integer, String from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import sessionmakerengine = create_engine(&amp;#39;sqlite:///data.db&amp;#39;, echo=True) Base = declarative_base() Session = sessionmaker(bind=engine) session = Session()class Country(Base): __tablename__ = &amp;#39;country&amp;#39; id = Column(Integer, primary_key=True) name = Column(String) capital = Column(String) population = Column(Integer) def __init__(self, id, name, capital, population): self.id = id self.name = name self.capital = capital self.population = population def json(self): return { &amp;#39;id&amp;#39;: self.</description>
+    </item>
+    
+    <item>
+      <title>File System Methods</title>
+      <link>https://mmblack4.github.io/mynotes/python/basics/file-system-methods/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/basics/file-system-methods/</guid>
+      <description>import os Get Info
+# get the current working directory path as a string (pwd - linux, windows) os.getcwd()  &#39;/home/mmblack/Documents/project/mynotes/content/python/basics&#39;  # get the contents of the current working directory as a list of strings(ls -linux, dir - windows) os.listdir() [&#39;simple-python.md&#39;, &#39;rock-paper-scissor.md&#39;, &#39;Find-you-IP-id-and-name.ipynb&#39;, &#39;auto-search.ipynb&#39;, &#39;template-simple-add.md&#39;, &#39;auto-search.md&#39;, &#39;break-with-youtube-song.ipynb&#39;, &#39;caesar-cipher.md&#39;, &#39;template-simple-add.ipynb&#39;, &#39;template-Copy1.md&#39;, &#39;mult.md&#39;, &#39;Find-you-IP-id-and-name.md&#39;, &#39;.ipynb_checkpoints&#39;, &#39;simple-python.ipynb&#39;, &#39;template.ipynb&#39;, &#39;template.md&#39;, &#39;caesar-cipher.ipynb&#39;, &#39;mult.ipynb&#39;, &#39;File-System-Methods.ipynb&#39;, &#39;break-with-youtube-song.md&#39;, &#39;rock-paper-scissor.ipynb&#39;]  # returns a generator with name and path info for directories and  # files in the the current directory and all subdirectories— no exact short CLI equivalent,  # but ls -R provides subdirectory names and the names of files within subdirectories path = &amp;#39;/home/mmblack/Documents/project/mynotes/content/&amp;#39; for root, dirs, files in os.</description>
+    </item>
     
     <item>
       <title>Add</title>

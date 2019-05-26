@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="File System Methods" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/basics/file-system-methods/" /><meta property="article:published_time" content="2019-05-25T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-05-25T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="File System Methods"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.52" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "File System Methods",
+  "url": "https://mmblack4.github.io/mynotes/python/basics/file-system-methods/",
+  "wordCount": "242",
+  "datePublished": "2019-05-25T00:00:00&#43;00:00",
+  "dateModified": "2019-05-25T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "TACT"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>File System Methods</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://mmblack4.github.io/mynotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://mmblack4.github.io/mynotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Muthu Mani" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://mmblack4.github.io/mynotes/">Muthu Mani</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">File System Methods</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2019-05-25T00:00:00Z "> 25 May 2019</time>
+    </div>
+  </header>
+  <div class="content">
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span></code></pre></div>
+<p>Get Info</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># get the current working directory path as a string (pwd - linux, windows)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> </code></pre></div>
+<pre><code>'/home/mmblack/Documents/project/mynotes/content/python/basics'
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># get the contents of the current working directory as a list of strings(ls -linux, dir - windows)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span></code></pre></div>
+<pre><code>['simple-python.md',
+ 'rock-paper-scissor.md',
+ 'Find-you-IP-id-and-name.ipynb',
+ 'auto-search.ipynb',
+ 'template-simple-add.md',
+ 'auto-search.md',
+ 'break-with-youtube-song.ipynb',
+ 'caesar-cipher.md',
+ 'template-simple-add.ipynb',
+ 'template-Copy1.md',
+ 'mult.md',
+ 'Find-you-IP-id-and-name.md',
+ '.ipynb_checkpoints',
+ 'simple-python.ipynb',
+ 'template.ipynb',
+ 'template.md',
+ 'caesar-cipher.ipynb',
+ 'mult.ipynb',
+ 'File-System-Methods.ipynb',
+ 'break-with-youtube-song.md',
+ 'rock-paper-scissor.ipynb']
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># returns a generator with name and path info for directories and </span>
+<span class="c1"># files in the the current directory and all subdirectories— no exact short CLI equivalent, </span>
+<span class="c1"># but ls -R provides subdirectory names and the names of files within subdirectories</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/home/mmblack/Documents/project/mynotes/content/&#39;</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">dirs</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;______________________________________________________________&#39;</span><span class="p">)</span></code></pre></div>
+<pre><code>/home/mmblack/Documents/project/mynotes/content/
+['python']
+[]
+______________________________________________________________
+/home/mmblack/Documents/project/mynotes/content/python
+['basics', 'pandas']
+[]
+______________________________________________________________
+/home/mmblack/Documents/project/mynotes/content/python/basics
+['.ipynb_checkpoints']
+['simple-python.md', 'rock-paper-scissor.md', 'Find-you-IP-id-and-name.ipynb', 'auto-search.ipynb', 'template-simple-add.md', 'auto-search.md', 'break-with-youtube-song.ipynb', 'caesar-cipher.md', 'template-simple-add.ipynb', 'template-Copy1.md', 'mult.md', 'Find-you-IP-id-and-name.md', 'simple-python.ipynb', 'template.ipynb', 'template.md', 'caesar-cipher.ipynb', 'mult.ipynb', 'File-System-Methods.ipynb', 'break-with-youtube-song.md', 'rock-paper-scissor.ipynb']
+______________________________________________________________
+/home/mmblack/Documents/project/mynotes/content/python/basics/.ipynb_checkpoints
+[]
+['mult-checkpoint.ipynb', 'caesar-cipher-checkpoint.ipynb', 'rock-paper-scissor-checkpoint.ipynb', 'File-System-Methods-checkpoint.ipynb', 'auto-search-checkpoint.ipynb', 'Find-you-IP-id-and-name-checkpoint.ipynb', 'template-checkpoint.ipynb', 'break-with-youtube-song-checkpoint.ipynb', 'template-simple-add-checkpoint.ipynb']
+______________________________________________________________
+/home/mmblack/Documents/project/mynotes/content/python/pandas
+['.ipynb_checkpoints']
+['DataFrame_object.md', 'Series_object.md', 'Series_object.ipynb', 'template-Copy2.ipynb', 'Loading_data_from_files.ipynb', 'zero.ipynb', 'DataFrame_object.ipynb', 'zero.md', 'Loading_data_from_files.md', 'template.ipynb', 'template.md', 'template-Copy2.md']
+______________________________________________________________
+/home/mmblack/Documents/project/mynotes/content/python/pandas/.ipynb_checkpoints
+[]
+['zero-checkpoint.ipynb', 'DataFrame_object-checkpoint.ipynb', 'Series_object-checkpoint.ipynb', 'template-checkpoint.ipynb', 'template-Copy2-checkpoint.ipynb', 'Loading_data_from_files-checkpoint.ipynb']
+______________________________________________________________
+</code></pre>
+
+<p>Change Things</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#change the current working directory (cd -linux,windows)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;curent dir:&#34;</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;new dir:&#34;</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span></code></pre></div>
+<pre><code>curent dir: /home/mmblack/Documents/project/mynotes/content/python/basics
+new dir: /
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># create a path for later use</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># make directory(aka folder) (mkdir -linux)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;/home/mmblack/Disktop/happy&#39;</span><span class="p">)</span>
+<span class="c1"># change directory</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/home/mmblack/Disktop&#39;</span><span class="p">)</span>
+<span class="c1"># list directory </span>
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span></code></pre></div>
+<pre><code>['happy']
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># copy a file or directory (cp -linux)</span>
+<span class="c1"># shutil.copy2(&#34;source_file&#34;, &#34;destination&#34;)</span>
+<span class="kn">import</span> <span class="nn">shutil</span> <span class="c1">#this library of copy</span></code></pre></div>
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 17 pages and is available on <a href="https://github.com/teamtact">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
