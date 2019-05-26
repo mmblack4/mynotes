@@ -1,5 +1,5 @@
 ---
-title: "Series_object"
+title: "Series Object"
 author: "TACT"
 date: 2019-04-20
 description: "-"

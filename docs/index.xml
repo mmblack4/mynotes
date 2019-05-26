@@ -86,13 +86,13 @@ import pandas as pd from pandas import DataFrame, Seriesdates = pd.date_range(&a
     </item>
     
     <item>
-      <title>Loading csv data from files</title>
+      <title>Loading CSV Data From Files</title>
       <link>https://mmblack4.github.io/mynotes/python/pandas/loading_data_from_files/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mmblack4.github.io/mynotes/python/pandas/loading_data_from_files/</guid>
       <description>Loading CSV data from files The pandas livrary provides built-in support for loading data in .csv format
-print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+import pandas as pddf = pd.read_csv(&amp;#39;data/weather.csv&amp;#39;) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    MinTemp MaxTemp Rainfall Evaporation Sunshine WindGustDir WindGustSpeed WindDir9am WindDir3pm WindSpeed9am ... Humidity3pm Pressure9am Pressure3pm Cloud9am Cloud3pm Temp9am Temp3pm RainToday RISK_MM RainTomorrow     0 8.</description>
     </item>
     
     <item>
@@ -114,7 +114,7 @@ print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
     <item>
-      <title>Series_object</title>
+      <title>Series Object</title>
       <link>https://mmblack4.github.io/mynotes/python/pandas/series_object/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
