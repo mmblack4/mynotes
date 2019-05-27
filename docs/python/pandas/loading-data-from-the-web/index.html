@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Loading Data From The Web" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/pandas/loading-data-from-the-web/" /><meta property="article:published_time" content="2019-05-27T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-05-27T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Loading Data From The Web"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.52" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Loading Data From The Web",
+  "url": "https://mmblack4.github.io/mynotes/python/pandas/loading-data-from-the-web/",
+  "wordCount": "251",
+  "datePublished": "2019-05-27T00:00:00&#43;00:00",
+  "dateModified": "2019-05-27T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "TACT"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>Loading Data From The Web</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://mmblack4.github.io/mynotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://mmblack4.github.io/mynotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Muthu Mani" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://mmblack4.github.io/mynotes/">Muthu Mani</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">Loading Data From The Web</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2019-05-27T00:00:00Z "> 27 May 2019</time>
+    </div>
+  </header>
+  <div class="content">
+  <p>Data from the web can also be easily read with pandas. to demonstrate this, we will perform a simple load of actual stock data</p>
+
+<pre><code>import pandas_datareader.data as web
+from datetime import date
+from dateutil.relativedelta import relativedelta
+</code></pre>
+
+<pre><code># read the last three months of data for GOOG
+goog = web.DataReader('GOOG', &quot;yahoo&quot;,
+                     date.today() +
+                     relativedelta(months=-3))
+</code></pre>
+
+<pre><code>goog.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Open</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Adj Close</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-02-26</th>
+      <td>1119.510010</td>
+      <td>1099.920044</td>
+      <td>1105.750000</td>
+      <td>1115.130005</td>
+      <td>1471300</td>
+      <td>1115.130005</td>
+    </tr>
+    <tr>
+      <th>2019-02-27</th>
+      <td>1117.979980</td>
+      <td>1101.000000</td>
+      <td>1106.949951</td>
+      <td>1116.050049</td>
+      <td>968400</td>
+      <td>1116.050049</td>
+    </tr>
+    <tr>
+      <th>2019-02-28</th>
+      <td>1127.650024</td>
+      <td>1111.010010</td>
+      <td>1111.300049</td>
+      <td>1119.920044</td>
+      <td>1542500</td>
+      <td>1119.920044</td>
+    </tr>
+    <tr>
+      <th>2019-03-01</th>
+      <td>1142.969971</td>
+      <td>1124.750000</td>
+      <td>1124.900024</td>
+      <td>1140.989990</td>
+      <td>1450300</td>
+      <td>1140.989990</td>
+    </tr>
+    <tr>
+      <th>2019-03-04</th>
+      <td>1158.280029</td>
+      <td>1130.689941</td>
+      <td>1146.989990</td>
+      <td>1147.800049</td>
+      <td>1446000</td>
+      <td>1147.800049</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code>goog['Adj Close']
+</code></pre>
+
+<pre><code>Date
+2019-02-26    1115.130005
+2019-02-27    1116.050049
+2019-02-28    1119.920044
+2019-03-01    1140.989990
+2019-03-04    1147.800049
+2019-03-05    1162.030029
+2019-03-06    1157.859985
+2019-03-07    1143.300049
+2019-03-08    1142.319946
+2019-03-11    1175.760010
+2019-03-12    1193.199951
+2019-03-13    1193.319946
+2019-03-14    1185.550049
+2019-03-15    1184.459961
+2019-03-18    1184.260010
+2019-03-19    1198.849976
+2019-03-20    1223.969971
+2019-03-21    1231.540039
+2019-03-22    1205.500000
+2019-03-25    1193.000000
+2019-03-26    1184.619995
+2019-03-27    1173.020020
+2019-03-28    1168.489990
+2019-03-29    1173.310059
+2019-04-01    1194.430054
+2019-04-02    1200.489990
+2019-04-03    1205.920044
+2019-04-04    1215.000000
+2019-04-05    1207.150024
+2019-04-08    1203.839966
+                 ...     
+2019-04-12    1217.869995
+2019-04-15    1221.099976
+2019-04-16    1227.130005
+2019-04-17    1236.339966
+2019-04-18    1236.369995
+2019-04-22    1248.839966
+2019-04-23    1264.550049
+2019-04-24    1256.000000
+2019-04-25    1263.449951
+2019-04-26    1272.180054
+2019-04-29    1287.579956
+2019-04-30    1188.479980
+2019-05-01    1168.079956
+2019-05-02    1162.609985
+2019-05-03    1185.400024
+2019-05-06    1189.390015
+2019-05-07    1174.099976
+2019-05-08    1166.270020
+2019-05-09    1162.380005
+2019-05-10    1164.270020
+2019-05-13    1132.030029
+2019-05-14    1120.439941
+2019-05-15    1164.209961
+2019-05-16    1178.979980
+2019-05-17    1162.300049
+2019-05-20    1138.849976
+2019-05-21    1149.630005
+2019-05-22    1151.420044
+2019-05-23    1140.770020
+2019-05-24    1133.469971
+Name: Adj Close, Length: 63, dtype: float64
+</code></pre>
+
+<pre><code>
+</code></pre>
+
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 18 pages and is available on <a href="https://github.com/teamtact">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

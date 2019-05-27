@@ -6,10 +6,20 @@
     <description>Recent content on Muthu Mani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mmblack4.github.io/mynotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Loading Data From The Web</title>
+      <link>https://mmblack4.github.io/mynotes/python/pandas/loading-data-from-the-web/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/pandas/loading-data-from-the-web/</guid>
+      <description>Data from the web can also be easily read with pandas. to demonstrate this, we will perform a simple load of actual stock data
+import pandas_datareader.data as web from datetime import date from dateutil.relativedelta import relativedelta  # read the last three months of data for GOOG goog = web.DataReader(&#39;GOOG&#39;, &amp;quot;yahoo&amp;quot;, date.today() + relativedelta(months=-3))  goog.head()   .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .</description>
+    </item>
     
     <item>
       <title>Create Table And Insert Data</title>
