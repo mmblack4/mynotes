@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Find My IP-id and name" />
+<meta property="og:title" content="Network Fundamentals" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/basics/find-you-ip-id-and-name/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/network/network-fundamentals/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Find My IP-id and name"/>
+<meta name="twitter:title" content="Network Fundamentals"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.52" /> 
     
@@ -32,9 +32,9 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Find My IP-id and name",
-  "url": "https://mmblack4.github.io/mynotes/python/basics/find-you-ip-id-and-name/",
-  "wordCount": "20",
+  "headline": "Network Fundamentals",
+  "url": "https://mmblack4.github.io/mynotes/python/network/network-fundamentals/",
+  "wordCount": "489",
   "datePublished": "2019-04-20T00:00:00&#43;00:00",
   "dateModified": "2019-04-20T00:00:00&#43;00:00",
   "author": {
@@ -45,7 +45,7 @@
 }
 </script> 
 
-    <title>Find My IP-id and name</title>
+    <title>Network Fundamentals</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,17 +117,192 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Find My IP-id and name</h1>
+    <h1 class="technical_note_title">Network Fundamentals</h1>
     <div class="technical_note_date">
       <time datetime=" 2019-04-20T00:00:00Z "> 20 Apr 2019</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">socket</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">hostname</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">()</span>
-<span class="n">ipaddr</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">hostname</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s1">&#39;your computer name:&#39;</span><span class="p">,</span><span class="n">hostname</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;your computer IP:&#39;</span><span class="p">,</span><span class="n">ipaddr</span><span class="p">)</span></code></pre></div>
-<pre><code>your computer name: mmblack
-your computer IP: 127.0.1.1
+  
+
+<h2 id="the-problem">The Problem</h2>
+
+<pre><code>* Communication between computers
+
+* It's just sending/receiving bits
+</code></pre>
+
+<h2 id="two-min-issues">Two Min Issues</h2>
+
+<pre><code>* Addressing
+
+    * Specifying a remote computer and service
+
+* Data transport
+
+    * Moving bits back and forth
+</code></pre>
+
+<h2 id="network-addressing">Network Addressing</h2>
+
+<pre><code>* Machines have a hostname and IP address
+
+* Programs/services have port number
+</code></pre>
+
+<h2 id="standard-ports">Standard Ports</h2>
+
+<pre><code>* Ports for common services are Pressigned
+
+     21  FTP
+
+     22  SSH
+
+     23  Telnet
+
+     25  SMTP  (Mail)
+
+     80  HTTP  (Web)
+
+    110  POP3  (Mail)
+
+    119  NNTP  (News)
+
+    443  HTTPs (web)
+
+* Other port numbers may just be randomly assigned to programs by the operation system
+</code></pre>
+
+<h2 id="using-netstart">Using netstart</h2>
+
+<pre><code>* Use 'netstart' to view active network connections
+
+    sheel: newstart -a
+
+* Note: Must execute from the command shell on both Unix and Windows
+</code></pre>
+
+<h2 id="connections">Connections</h2>
+
+<pre><code>* Each endpoint of network connection is always represented by a host and post #
+
+* In python you write it out as a tuple (host, post)
+</code></pre>
+
+<h2 id="client-server-concept">Client/Server concept</h2>
+
+<pre><code>* Each endpoint is a running program
+
+* servers wait for incoming connections and provide a service (e.g: web, mail)
+
+* Clients make connections to servers
+</code></pre>
+
+<h2 id="request-response-cycle">Request/Response Cycle</h2>
+
+<pre><code>* Most nerwork programs use a request/response model based on messages
+
+* Client sends a request message (eg: HTTP)
+        GET /index.html HTTP/1.0
+
+* server sends back a response message
+    HTTP/1.0 200 ok
+    content-type: text/html
+    content-length: 48823
+
+    &lt;html&gt;
+    .....
+
+* The exact fromat depends on the appllication
+</code></pre>
+
+<h2 id="using-telnet">Using Telnet</h2>
+
+<pre><code>* As a debugging aid, telnet can be used to directly communicate with manu services
+    telnet hostnmae portnum
+</code></pre>
+
+<h2 id="data-transport">Data Transport</h2>
+
+<pre><code>* There are two basic types of communication
+
+* Streams (TCP): computers establish a connection with each other and read/Write data in a continuous stream of byetes like a flie. This is the most common
+
+* Datagrams (UDP): Computers send discrete packets (or messages) to each other. Each packet contains a collection of bytes, but each packet is separate and self-contained.
+</code></pre>
+
+<h2 id="sockets">Sockets</h2>
+
+<pre><code>* Programming abstraction for network code
+
+* Socket: A communication endpoint
+
+* Supported by socket library module
+
+* Allows connections to be made and data to be transmitted in either direction
+</code></pre>
+
+<h2 id="socket-basics">Socket Basics</h2>
+
+<pre><code>* To create a socket
+    import socket
+    s = socket.socket(addr_family, type)
+
+* Address families
+    socket.AF_INET  internet protocol (IPv4)
+    socket.AF_INET6 internet protocol (IPV6)
+
+* Socket types
+    socket.SOCK_STREAM connection baseed stream (TCP)
+    socket.SOCK_DGRAM  Datagrams (UDP)
+</code></pre>
+
+<h2 id="socket-types">socket Types</h2>
+
+<pre><code>* Almost all code will use one of following
+
+    from socket import *
+
+    s = socket(AF_INET, SOCK_STREAM)
+    s = scoket(AF_INET, SOCK_DGRAM)
+
+* Most common case: TCP connection
+    s = socket(AF_INET, SOCK_STREAM)
+</code></pre>
+
+<h2 id="using-a-scoket">Using a Scoket</h2>
+
+<pre><code>* creating a socket is onlu th first step
+
+    s = socket(AF_INET, SOCK_STREAM)
+
+* Further use depends on application
+
+* Server
+    * Listen for incoming connections
+
+* Client
+
+    * Make an outgoing connection
+</code></pre>
+
+<h1 id="tcp-client">TCP Client</h1>
+
+<pre><code>* How to make an outgoing connection
+
+    from socket import *
+    s = socket(AF_INET, SOCK_STREAM)
+    s.connect(('www.python.org', 80))
+    s.send(&quot;GET /index.html HTTP/1.0\n\n&quot;)
+    data = s.recv(10000)
+    s.close()
+
+* s.connect(addr) makes a connection
+    s.connect(('www.python.org',80))
+
+* Once connected, usd send(),recv() to transmit and receive data
+
+* close() shuts down the connection
 </code></pre>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>

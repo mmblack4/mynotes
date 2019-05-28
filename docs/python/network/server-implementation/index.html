@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Find My IP-id and name" />
+<meta property="og:title" content="Server Implementation" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/basics/find-you-ip-id-and-name/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/network/server-implementation/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Find My IP-id and name"/>
+<meta name="twitter:title" content="Server Implementation"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.52" /> 
     
@@ -32,9 +32,9 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Find My IP-id and name",
-  "url": "https://mmblack4.github.io/mynotes/python/basics/find-you-ip-id-and-name/",
-  "wordCount": "20",
+  "headline": "Server Implementation",
+  "url": "https://mmblack4.github.io/mynotes/python/network/server-implementation/",
+  "wordCount": "156",
   "datePublished": "2019-04-20T00:00:00&#43;00:00",
   "dateModified": "2019-04-20T00:00:00&#43;00:00",
   "author": {
@@ -45,7 +45,7 @@
 }
 </script> 
 
-    <title>Find My IP-id and name</title>
+    <title>Server Implementation</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,19 +117,43 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Find My IP-id and name</h1>
+    <h1 class="technical_note_title">Server Implementation</h1>
     <div class="technical_note_date">
       <time datetime=" 2019-04-20T00:00:00Z "> 20 Apr 2019</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">socket</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">hostname</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">()</span>
-<span class="n">ipaddr</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">hostname</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s1">&#39;your computer name:&#39;</span><span class="p">,</span><span class="n">hostname</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;your computer IP:&#39;</span><span class="p">,</span><span class="n">ipaddr</span><span class="p">)</span></code></pre></div>
-<pre><code>your computer name: mmblack
-your computer IP: 127.0.1.1
-</code></pre>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+  
+
+<ul>
+<li>Network server are a bit more tricky</li>
+<li>must listen for incoming connections on a well-know port number</li>
+<li>Tyically run foreve in a server-loop</li>
+<li>May have to service multiple clients</li>
+</ul>
+
+<h1 id="tcp-server">TCP Server</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">socket</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span> <span class="mi">9000</span><span class="p">))</span> <span class="c1"># binds the socket to a specific address</span>
+<span class="n">s</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#Tells operating system to start listening for connections on the socket</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">clientsocket</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span> <span class="c1">#Accept a new client connection</span>
+    <span class="c1"># clientsocket - This is a new socket that&#39;s used for data</span>
+    <span class="c1"># address - This is the network/port address of the client that connected</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;connection from {address}&#34;</span><span class="p">)</span>
+    <span class="n">clientsocket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s2">&#34;Hello {address[0]}&#34;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">))</span> <span class="c1"># send data to client to client socket</span>
+    <span class="c1"># send data can be bytes</span>
+    <span class="n">clientsocket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    </code></pre></div>
+<h1 id="client">client</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">socket</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span> <span class="mi">9000</span><span class="p">))</span> <span class="c1"># connecting to server by specifice addres and port</span>
+
+<span class="n">msg</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span> <span class="c1"># receive data and stord buffer, IN this case buffer size is 1024 character</span>
+<span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>
   <aside>
       

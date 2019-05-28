@@ -115,6 +115,15 @@ import pandas as pddf = pd.read_csv(&amp;#39;data/weather.csv&amp;#39;) df  .dat
     </item>
     
     <item>
+      <title>Network Fundamentals</title>
+      <link>https://mmblack4.github.io/mynotes/python/network/network-fundamentals/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/network/network-fundamentals/</guid>
+      <description>The Problem * Communication between computers * It&#39;s just sending/receiving bits  Two Min Issues * Addressing * Specifying a remote computer and service * Data transport * Moving bits back and forth  Network Addressing * Machines have a hostname and IP address * Programs/services have port number  Standard Ports * Ports for common services are Pressigned 21 FTP 22 SSH 23 Telnet 25 SMTP (Mail) 80 HTTP (Web) 110 POP3 (Mail) 119 NNTP (News) 443 HTTPs (web) * Other port numbers may just be randomly assigned to programs by the operation system  Using netstart * Use &#39;netstart&#39; to view active network connections sheel: newstart -a * Note: Must execute from the command shell on both Unix and Windows  Connections * Each endpoint of network connection is always represented by a host and post # * In python you write it out as a tuple (host, post)  Client/Server concept * Each endpoint is a running program * servers wait for incoming connections and provide a service (e.</description>
+    </item>
+    
+    <item>
       <title>Rock Paper Scissor</title>
       <link>https://mmblack4.github.io/mynotes/python/basics/rock-paper-scissor/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
@@ -133,6 +142,15 @@ import pandas as pddf = pd.read_csv(&amp;#39;data/weather.csv&amp;#39;) df  .dat
     </item>
     
     <item>
+      <title>Server Implementation</title>
+      <link>https://mmblack4.github.io/mynotes/python/network/server-implementation/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/network/server-implementation/</guid>
+      <description>Network server are a bit more tricky must listen for incoming connections on a well-know port number Tyically run foreve in a server-loop May have to service multiple clients  TCP Server from socket import * s = socket(AF_INET, SOCK_STREAM) s.bind((&amp;#34;127.0.0.1&amp;#34;, 9000)) # binds the socket to a specific address s.listen(5) #Tells operating system to start listening for connections on the socket while True: clientsocket, address = s.accept() #Accept a new client connection # clientsocket - This is a new socket that&amp;#39;s used for data # address - This is the network/port address of the client that connected print(&amp;#34;connection from {address}&amp;#34;) clientsocket.</description>
+    </item>
+    
+    <item>
       <title>Simple Python</title>
       <link>https://mmblack4.github.io/mynotes/python/basics/simple-python/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
@@ -143,19 +161,19 @@ import pandas as pddf = pd.read_csv(&amp;#39;data/weather.csv&amp;#39;) df  .dat
     
     <item>
       <title>Template</title>
-      <link>https://mmblack4.github.io/mynotes/python/basics/template/</link>
+      <link>https://mmblack4.github.io/mynotes/python/network/template/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mmblack4.github.io/mynotes/python/basics/template/</guid>
+      <guid>https://mmblack4.github.io/mynotes/python/network/template/</guid>
       <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
     <item>
       <title>Template</title>
-      <link>https://mmblack4.github.io/mynotes/python/pandas/template-copy2/</link>
+      <link>https://mmblack4.github.io/mynotes/python/basics/template/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mmblack4.github.io/mynotes/python/pandas/template-copy2/</guid>
+      <guid>https://mmblack4.github.io/mynotes/python/basics/template/</guid>
       <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
