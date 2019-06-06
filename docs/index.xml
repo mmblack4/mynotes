@@ -41,6 +41,15 @@ import pandas_datareader.data as web from datetime import date from dateutil.rel
     </item>
     
     <item>
+      <title>numpy array and basic array operation</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/template-copy1/</link>
+      <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/template-copy1/</guid>
+      <description>import numpy as np# array is use to creat a numpy array a1 = np.array([1, 2, 3, 4, 5]) a1 array([1, 2, 3, 4, 5])  # type type(a1) numpy.ndarray  # how many elements np.size(a1) 5  # any float in the sequences makes  # it an array of floats a2 = np.array([1, 2, 3, 4, 5.0]) a2 array([1., 2., 3., 4., 5.])  # array is all of one type a2.</description>
+    </item>
+    
+    <item>
       <title>Add</title>
       <link>https://mmblack4.github.io/mynotes/python/basics/template-simple-add/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
@@ -165,6 +174,15 @@ import pandas as pddf = pd.read_csv(&amp;#39;data/weather.csv&amp;#39;) df  .dat
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mmblack4.github.io/mynotes/python/network/template/</guid>
+      <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/template/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/template/</guid>
       <description>print(&amp;#39;Hello Toronto&amp;#39;) Hello Toronto  print(2) 2  </description>
     </item>
     
