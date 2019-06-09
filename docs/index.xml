@@ -6,10 +6,28 @@
     <description>Recent content on Muthu Mani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mmblack4.github.io/mynotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creating Arrays</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/numpy-arrays/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/numpy-arrays/</guid>
+      <description>import numpy as np 1D array # 1D array a = np.array([1, 2, 3]) a array([1, 2, 3])  a.shape (3,)  2D array # 2D array b = np.array([(1.5, 2, 3), (4, 5, 6)]) b array([[1.5, 2. , 3. ], [4. , 5. , 6. ]])  b.shape (2, 3)  3D array c = np.array([ [(1.5, 2, 3), (4, 5, 6)], [(3, 2, 1), (4, 5, 6)] ]) c array([[[1.</description>
+    </item>
+    
+    <item>
+      <title>Initial Placeholders</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/initial-placeholders/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/initial-placeholders/</guid>
+      <description>import numpy as np Create an array of Zeros np.zeros((3,4)) # 3x4 array([[0., 0., 0., 0.], [0., 0., 0., 0.], [0., 0., 0., 0.]])  Create an array of ones np.ones((2,3,4),dtype=np.int16) #2x3x4 array([[[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]], [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]], dtype=int16)  Create an array of evenly # array range 10 to 25 np.</description>
+    </item>
     
     <item>
       <title>Loading Data From The Web</title>

@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mmblack4.github.io/mynotes/python/numpy/numpy-arrays/</loc>
+    <lastmod>2019-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmblack4.github.io/mynotes/python/numpy/initial-placeholders/</loc>
+    <lastmod>2019-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mmblack4.github.io/mynotes/python/pandas/loading-data-from-the-web/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
@@ -114,7 +124,7 @@
   
   <url>
     <loc>https://mmblack4.github.io/mynotes/</loc>
-    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
