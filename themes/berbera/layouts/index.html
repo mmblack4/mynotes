@@ -62,7 +62,26 @@
                 </div>
             </div>
         </div>
-        
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">NumPy</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ range (where .Pages "File.Dir" "in" "/python/NumPy/").ByTitle }}
+                                {{ if ne .Title "Template" }}
+                                <li>
+                                    <a href="{{.Permalink}}">{{.Title}}</a>
+                                </li>
+                                {{ end }}    
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -89,25 +108,6 @@
                     <div class="card-body">
                         <ul>
                             {{ range (where .Pages "File.Dir" "in" "/python/Network/").ByTitle }}
-                                {{ if ne .Title "Template" }}
-                                <li>
-                                    <a href="{{.Permalink}}">{{.Title}}</a>
-                                </li>
-                                {{ end }}    
-                            {{ end }}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">NumPy</h4>
-                    <div class="card-body">
-                        <ul>
-                            {{ range (where .Pages "File.Dir" "in" "/python/NumPy/").ByTitle }}
                                 {{ if ne .Title "Template" }}
                                 <li>
                                     <a href="{{.Permalink}}">{{.Title}}</a>

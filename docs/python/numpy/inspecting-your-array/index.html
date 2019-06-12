@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Zero" />
+<meta property="og:title" content="Inspecting Your Array" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/pandas/zero/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/numpy/inspecting-your-array/" /><meta property="article:published_time" content="2019-06-09T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-06-09T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Zero"/>
+<meta name="twitter:title" content="Inspecting Your Array"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.52" /> 
     
@@ -32,20 +32,20 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Zero",
-  "url": "https://mmblack4.github.io/mynotes/python/pandas/zero/",
-  "wordCount": "111",
-  "datePublished": "2019-04-20T00:00:00&#43;00:00",
-  "dateModified": "2019-04-20T00:00:00&#43;00:00",
+  "headline": "Inspecting Your Array",
+  "url": "https://mmblack4.github.io/mynotes/python/numpy/inspecting-your-array/",
+  "wordCount": "100",
+  "datePublished": "2019-06-09T00:00:00&#43;00:00",
+  "dateModified": "2019-06-09T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
-    "name": "TACT"
+    "name": "muth mani"
   },
   "description": "-"
 }
 </script> 
 
-    <title>Zero</title>
+    <title>Inspecting Your Array</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,38 +117,61 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Zero</h1>
+    <h1 class="technical_note_title">Inspecting Your Array</h1>
     <div class="technical_note_date">
-      <time datetime=" 2019-04-20T00:00:00Z "> 20 Apr 2019</time>
+      <time datetime=" 2019-06-09T00:00:00Z "> 09 Jun 2019</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">dtype</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Col1&#39;</span><span class="p">,</span><span class="s1">&#39;int32&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Col2&#39;</span><span class="p">,</span><span class="s1">&#39;float32&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Col3&#39;</span><span class="p">,</span><span class="s1">&#39;float32&#39;</span><span class="p">)]</span>
-<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Row&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
-<pre><code>       Col1  Col2  Col3
-Row1      0   0.0   0.0
-Row2      0   0.0   0.0
-Row3      0   0.0   0.0
-Row4      0   0.0   0.0
-Row5      0   0.0   0.0
-Row6      0   0.0   0.0
-Row7      0   0.0   0.0
-Row8      0   0.0   0.0
-Row9      0   0.0   0.0
-Row10     0   0.0   0.0
-Row11     0   0.0   0.0
-Row12     0   0.0   0.0
-Row13     0   0.0   0.0
-Row14     0   0.0   0.0
-Row15     0   0.0   0.0
-Row16     0   0.0   0.0
-Row17     0   0.0   0.0
-Row18     0   0.0   0.0
-Row19     0   0.0   0.0
-Row20     0   0.0   0.0
+  
+
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># sample array</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">data</span></code></pre></div>
+<pre><code>array([[4, 4, 4, 4],
+       [4, 4, 4, 4],
+       [4, 4, 4, 4]])
+</code></pre>
+
+<h1 id="array-dimensions">Array dimensions</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">shape</span> <span class="c1">#3x4</span></code></pre></div>
+<pre><code>(3, 4)
+</code></pre>
+
+<h1 id="length-of-array">Length of array</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># 3 row</span></code></pre></div>
+<pre><code>3
+</code></pre>
+
+<h1 id="number-of-array-dimensions">Number of array dimensions</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="c1"># 2D array</span></code></pre></div>
+<pre><code>2
+</code></pre>
+
+<h1 id="number-of-array-elements">Number of array elements</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">size</span> <span class="c1"># 3x4 = 12</span></code></pre></div>
+<pre><code>12
+</code></pre>
+
+<h1 id="data-type-of-array-elements">Data type of array elements</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">dtype</span> <span class="c1"># return object</span></code></pre></div>
+<pre><code>dtype('int64')
+</code></pre>
+
+<h1 id="name-of-data-type">Name of data type</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">name</span> <span class="c1"># return string</span></code></pre></div>
+<pre><code>'int64'
+</code></pre>
+
+<h1 id="convert-an-array-to-different-type">Convert an array to different type</h1>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">data</span></code></pre></div>
+<pre><code>array([[4., 4., 4., 4.],
+       [4., 4., 4., 4.],
+       [4., 4., 4., 4.]])
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">.</span><span class="n">dtype</span></code></pre></div>
+<pre><code>dtype('float64')
 </code></pre>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>

@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Zero" />
+<meta property="og:title" content="Using Array And Scalars" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/pandas/zero/" /><meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://mmblack4.github.io/mynotes/python/numpy/using-arrays-and-scalars/" /><meta property="article:published_time" content="2019-06-12T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-06-12T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Zero"/>
+<meta name="twitter:title" content="Using Array And Scalars"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.52" /> 
     
@@ -32,20 +32,20 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Zero",
-  "url": "https://mmblack4.github.io/mynotes/python/pandas/zero/",
-  "wordCount": "111",
-  "datePublished": "2019-04-20T00:00:00&#43;00:00",
-  "dateModified": "2019-04-20T00:00:00&#43;00:00",
+  "headline": "Using Array And Scalars",
+  "url": "https://mmblack4.github.io/mynotes/python/numpy/using-arrays-and-scalars/",
+  "wordCount": "89",
+  "datePublished": "2019-06-12T00:00:00&#43;00:00",
+  "dateModified": "2019-06-12T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
-    "name": "TACT"
+    "name": "muth mani"
   },
   "description": "-"
 }
 </script> 
 
-    <title>Zero</title>
+    <title>Using Array And Scalars</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,38 +117,37 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Zero</h1>
+    <h1 class="technical_note_title">Using Array And Scalars</h1>
     <div class="technical_note_date">
-      <time datetime=" 2019-04-20T00:00:00Z "> 20 Apr 2019</time>
+      <time datetime=" 2019-06-12T00:00:00Z "> 12 Jun 2019</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">dtype</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Col1&#39;</span><span class="p">,</span><span class="s1">&#39;int32&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Col2&#39;</span><span class="p">,</span><span class="s1">&#39;float32&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Col3&#39;</span><span class="p">,</span><span class="s1">&#39;float32&#39;</span><span class="p">)]</span>
-<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Row&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
-<pre><code>       Col1  Col2  Col3
-Row1      0   0.0   0.0
-Row2      0   0.0   0.0
-Row3      0   0.0   0.0
-Row4      0   0.0   0.0
-Row5      0   0.0   0.0
-Row6      0   0.0   0.0
-Row7      0   0.0   0.0
-Row8      0   0.0   0.0
-Row9      0   0.0   0.0
-Row10     0   0.0   0.0
-Row11     0   0.0   0.0
-Row12     0   0.0   0.0
-Row13     0   0.0   0.0
-Row14     0   0.0   0.0
-Row15     0   0.0   0.0
-Row16     0   0.0   0.0
-Row17     0   0.0   0.0
-Row18     0   0.0   0.0
-Row19     0   0.0   0.0
-Row20     0   0.0   0.0
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># creating an array</span>
+<span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">)])</span>
+<span class="n">arr1</span></code></pre></div>
+<pre><code>array([[ 1,  2,  3,  4],
+       [ 8,  9, 10, 11]])
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># multiplication</span>
+<span class="n">arr1</span> <span class="o">*</span> <span class="n">arr1</span></code></pre></div>
+<pre><code>array([[  1,   4,   9,  16],
+       [ 64,  81, 100, 121]])
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># substraction</span>
+<span class="n">arr1</span> <span class="o">-</span> <span class="n">arr1</span></code></pre></div>
+<pre><code>array([[0, 0, 0, 0],
+       [0, 0, 0, 0]])
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># division</span>
+<span class="mi">1</span> <span class="o">/</span> <span class="n">arr1</span></code></pre></div>
+<pre><code>array([[1.        , 0.5       , 0.33333333, 0.25      ],
+       [0.125     , 0.11111111, 0.1       , 0.09090909]])
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># power</span>
+<span class="n">arr1</span> <span class="o">**</span> <span class="mi">3</span></code></pre></div>
+<pre><code>array([[   1,    8,   27,   64],
+       [ 512,  729, 1000, 1331]])
 </code></pre>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>

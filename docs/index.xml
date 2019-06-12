@@ -6,10 +6,37 @@
     <description>Recent content on Muthu Mani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mmblack4.github.io/mynotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Indexing Arrays</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/indexing-array/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/indexing-array/</guid>
+      <description>import numpy as np creating array range 0 to 11 arr = np.arange(0, 11) arr array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])  array index of 8 arr[8] 8  get by range 1 to 5 arr[1:5] array([1, 2, 3, 4])  arr[0:5] array([0, 1, 2, 3, 4])  set value for range arr[0:5] = 100arr array([100, 100, 100, 100, 100, 5, 6, 7, 8, 9, 10])  # slice_of_arr = arr[0:5]slice_of_arr array([100, 100, 100, 100, 100])  Index 2D array arr2d = np.</description>
+    </item>
+    
+    <item>
+      <title>Universal Array Functions</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/universal-array-functions/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/universal-array-functions/</guid>
+      <description>import numpy as nparr = np.arange(11) arr array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])  squer root np.sqrt(arr) array([0. , 1. , 1.41421356, 1.73205081, 2. , 2.23606798, 2.44948974, 2.64575131, 2.82842712, 3. , 3.16227766])  expt np.exp(arr) array([1.00000000e+00, 2.71828183e+00, 7.38905610e+00, 2.00855369e+01, 5.45981500e+01, 1.48413159e+02, 4.03428793e+02, 1.09663316e+03, 2.98095799e+03, 8.10308393e+03, 2.20264658e+04])  Binary Function a = np.random.random(10) a array([0.66448087, 0.91824602, 0.12914791, 0.89981498, 0.0213797 , 0.80503991, 0.0320084 , 0.88814445, 0.</description>
+    </item>
+    
+    <item>
+      <title>Using Array And Scalars</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/using-arrays-and-scalars/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/using-arrays-and-scalars/</guid>
+      <description>import numpy as np# creating an array arr1 = np.array([(1, 2, 3, 4), (8, 9, 10, 11)]) arr1 array([[ 1, 2, 3, 4], [ 8, 9, 10, 11]])  # multiplication arr1 * arr1 array([[ 1, 4, 9, 16], [ 64, 81, 100, 121]])  # substraction arr1 - arr1 array([[0, 0, 0, 0], [0, 0, 0, 0]])  # division 1 / arr1 array([[1. , 0.5 , 0.33333333, 0.25 ], [0.</description>
+    </item>
     
     <item>
       <title>Creating Arrays</title>
@@ -21,12 +48,30 @@
     </item>
     
     <item>
+      <title>Data Types</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/data-types/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/data-types/</guid>
+      <description> import numpy as np Signed 64-bit integer types np.int64 int  np.full((3, 3), 4.001, dtype=np.int64) array([[4, 4, 4], [4, 4, 4], [4, 4, 4]])  Standard double-precision floating point np.float32 numpy.float32  np.full((3, 3), 4.032, dtype=np.float32) array([[4.032, 4.032, 4.032], [4.032, 4.032, 4.032], [4.032, 4.032, 4.032]], dtype=float32)  Compllex numbers represented by 128 floats np.complex complex  Boolean type storing TRUE and FALSE values np.bool bool  np.eye(3, dtype=np.bool) array([[ True, False, False], [False, True, False], [False, False, True]])  </description>
+    </item>
+    
+    <item>
       <title>Initial Placeholders</title>
       <link>https://mmblack4.github.io/mynotes/python/numpy/initial-placeholders/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mmblack4.github.io/mynotes/python/numpy/initial-placeholders/</guid>
       <description>import numpy as np Create an array of Zeros np.zeros((3,4)) # 3x4 array([[0., 0., 0., 0.], [0., 0., 0., 0.], [0., 0., 0., 0.]])  Create an array of ones np.ones((2,3,4),dtype=np.int16) #2x3x4 array([[[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]], [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]], dtype=int16)  Create an array of evenly # array range 10 to 25 np.</description>
+    </item>
+    
+    <item>
+      <title>Inspecting Your Array</title>
+      <link>https://mmblack4.github.io/mynotes/python/numpy/inspecting-your-array/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmblack4.github.io/mynotes/python/numpy/inspecting-your-array/</guid>
+      <description>import numpy as np# sample array data = np.full((3, 4), 4) data array([[4, 4, 4, 4], [4, 4, 4, 4], [4, 4, 4, 4]])  Array dimensions data.shape #3x4 (3, 4)  Length of array len(data) # 3 row 3  Number of array dimensions data.ndim # 2D array 2  Number of array elements data.size # 3x4 = 12 12  Data type of array elements data.dtype # return object dtype(&#39;int64&#39;)  Name of data type data.</description>
     </item>
     
     <item>
@@ -56,15 +101,6 @@ import pandas_datareader.data as web from datetime import date from dateutil.rel
       <guid>https://mmblack4.github.io/mynotes/python/basics/file-system-methods/</guid>
       <description>import os Get Info
 # get the current working directory path as a string (pwd - linux, windows) os.getcwd()  &#39;/home/mmblack/Documents/project/mynotes/content/python/basics&#39;  # get the contents of the current working directory as a list of strings(ls -linux, dir - windows) os.listdir() [&#39;simple-python.md&#39;, &#39;rock-paper-scissor.md&#39;, &#39;Find-you-IP-id-and-name.ipynb&#39;, &#39;auto-search.ipynb&#39;, &#39;template-simple-add.md&#39;, &#39;auto-search.md&#39;, &#39;break-with-youtube-song.ipynb&#39;, &#39;caesar-cipher.md&#39;, &#39;template-simple-add.ipynb&#39;, &#39;template-Copy1.md&#39;, &#39;mult.md&#39;, &#39;Find-you-IP-id-and-name.md&#39;, &#39;.ipynb_checkpoints&#39;, &#39;simple-python.ipynb&#39;, &#39;template.ipynb&#39;, &#39;template.md&#39;, &#39;caesar-cipher.ipynb&#39;, &#39;mult.ipynb&#39;, &#39;File-System-Methods.ipynb&#39;, &#39;break-with-youtube-song.md&#39;, &#39;rock-paper-scissor.ipynb&#39;]  # returns a generator with name and path info for directories and  # files in the the current directory and all subdirectories— no exact short CLI equivalent,  # but ls -R provides subdirectory names and the names of files within subdirectories path = &amp;#39;/home/mmblack/Documents/project/mynotes/content/&amp;#39; for root, dirs, files in os.</description>
-    </item>
-    
-    <item>
-      <title>numpy array and basic array operation</title>
-      <link>https://mmblack4.github.io/mynotes/python/numpy/template-copy1/</link>
-      <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mmblack4.github.io/mynotes/python/numpy/template-copy1/</guid>
-      <description>import numpy as np# array is use to creat a numpy array a1 = np.array([1, 2, 3, 4, 5]) a1 array([1, 2, 3, 4, 5])  # type type(a1) numpy.ndarray  # how many elements np.size(a1) 5  # any float in the sequences makes  # it an array of floats a2 = np.array([1, 2, 3, 4, 5.0]) a2 array([1., 2., 3., 4., 5.])  # array is all of one type a2.</description>
     </item>
     
     <item>
